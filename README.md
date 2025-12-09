@@ -110,4 +110,19 @@ If you use NeuroGen in your research, please cite:
 
 ## License
 
-NeuroGen is released under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+MIT License - see LICENSE file for details
+
+## Acknowledgments
+
+Inspired by:
+- NEAT (NeuroEvolution of Augmenting Topologies)
+- Hebbian learning theory
+- Evolutionary computation research
+
+## Contact
+
+For questions or collaboration: your.email@example.com
+
+---
+
+**Built with ❤️ for evolutionary AI research**
