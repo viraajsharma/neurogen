@@ -1,0 +1,21 @@
+[2025-12-09 21:59:20] [INFO] Configuration:
+[2025-12-09 21:59:20] [INFO]   Population size: 150
+[2025-12-09 21:59:20] [INFO]   Generations: 200
+[2025-12-09 21:59:20] [INFO]   Elite size: 15
+[2025-12-09 21:59:20] [INFO]   Hebbian episodes: 5
+[2025-12-09 21:59:20] [INFO]   Hebbian learning rate: 0.01
+[2025-12-09 21:59:31] [SUCCESS] Best fitness achieved: 1.0877
+[2025-12-09 21:59:31] [INFO] Best genome: Genome(nodes=5, connections=6)
+[2025-12-09 21:59:31] [INFO]   Nodes: 5
+[2025-12-09 21:59:31] [INFO]   Connections: 6
+[2025-12-09 21:59:31] [INFO] XOR Truth Table Predictions:
+[2025-12-09 21:59:31] [INFO]   0 XOR 0 = 0 | Predicted: 0.000 (0) [PASS]
+[2025-12-09 21:59:31] [INFO]   0 XOR 1 = 1 | Predicted: 0.861 (1) [PASS]
+[2025-12-09 21:59:31] [INFO]   1 XOR 0 = 1 | Predicted: 0.497 (0) [FAIL]
+[2025-12-09 21:59:31] [INFO]   1 XOR 1 = 0 | Predicted: 0.466 (0) [PASS]
+[2025-12-09 21:59:32] [SUCCESS] Visualizations saved!
+[2025-12-09 21:59:32] [INFO] Check the generated files:
+[2025-12-09 21:59:32] [INFO]   - xor_evolution.log (training log)
+[2025-12-09 21:59:32] [INFO]   - best_xor_genome.json (best genome)
+[2025-12-09 21:59:32] [INFO]   - best_xor_network.png (network visualization)
+[2025-12-09 21:59:32] [INFO]   - xor_fitness_history.png (fitness plot)
