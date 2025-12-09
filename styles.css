@@ -1,0 +1,223 @@
+/* NeuroGen Landing Page – Professional, Clean, Responsive */
+/* --------------------------------------------------- */
+/* Color palette – muted dark blues with accent cyan */
+:root {
+    --primary-bg: #f9fafb; /* light gray background */
+    --primary-color: #0d3b66; /* deep blue */
+    --accent-color: #00a8e8; /* cyan accent */
+    --text-color: #222222; /* dark text */
+    --muted-text: #555555;
+    --border-radius: 8px;
+    --transition: 0.3s ease;
+    --max-width: 1200px;
+    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Reset & base */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--primary-bg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.container {
+    width: 90%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+/* Header */
+.site-header {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 1rem 0;
+}
+.site-header .logo {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+}
+.site-header .tagline {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+    color: #fff;
+    text-align: center;
+    padding: 4rem 0;
+}
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+.hero .hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+.btn-primary {
+    display: inline-block;
+    background: #fff;
+    color: var(--primary-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    transition: var(--transition);
+}
+.btn-primary:hover {
+    background: var(--accent-color);
+    color: #fff;
+}
+
+/* Sections */
+.section {
+    padding: 3rem 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+.section p,
+.section ul {
+    max-width: 800px;
+    margin: 0 auto 1.5rem auto;
+    color: var(--muted-text);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+.section ul {
+    list-style: disc inside;
+}
+
+/* Grid system */
+.grid {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+.three-columns {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.two-columns {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.card {
+    background: #fff;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: var(--transition);
+}
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.card .icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+}
+.card h3 {
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+/* Screenshots */
+.screenshot {
+    width: 100%;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.placeholder-note {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--muted-text);
+    margin-top: 0.5rem;
+}
+
+/* Code block */
+pre {
+    background: #f4f4f4;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    overflow-x: auto;
+    font-family: 'Courier New', monospace;
+}
+code {
+    color: var(--primary-color);
+}
+
+/* Timeline */
+.timeline {
+    list-style: none;
+    padding-left: 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.timeline li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+}
+.timeline li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+/* Footer */
+.site-footer {
+    background: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+}
+.site-footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .hero h2 {font-size: 2rem;}
+    .hero .hero-subtitle {font-size: 1rem;}
+    .section h2 {font-size: 1.75rem;}
+}
