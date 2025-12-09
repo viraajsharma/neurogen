@@ -1,6 +1,6 @@
 # NeuroGen
 
-![NeuroGen Logo](assets/logo_placeholder.png)
+![NeuroGen Logo](assets/logo.png)
 
 **NeuroGen** is a research‑grade open‑source AI framework that replaces backpropagation with evolutionary search, genome‑driven network construction, and local learning rules (Hebbian, Oja, BCM, STDP). It enables the evolution of neural architectures and dynamic topology mutations without gradients.
 
@@ -32,8 +32,8 @@ NeuroGen offers a **backprop‑free** alternative that:
 ## Screenshots
 
 <div align="center">
-  <img src="assets/fitness_curve_placeholder.png" alt="Fitness Curve" width="45%" />
-  <img src="assets/network_graph_placeholder.png" alt="Network Graph" width="45%" />
+  <img src="assets/fitness_curve.png" alt="Fitness Curve" width="45%" />
+  <img src="assets/network_graph.png" alt="Network Graph" width="45%" />
 </div>
 
 *Placeholders – replace with actual images in the `/assets/` directory.*
