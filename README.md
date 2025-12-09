@@ -254,7 +254,7 @@ Inspired by:
 
 ## Contact
 
-For questions or collaboration: your.email@example.com
+For questions or collaboration: viraajsharma25@gmail.com
 
 ---
 
