@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NeuroGen – Backprop‑Free Evolutionary AI</title>
     <link rel="stylesheet" href="styles.css" />
-    <meta name="description" content="NeuroGen is a research‑grade AI framework that replaces backpropagation with evolutionary search, genome‑driven construction, and local learning rules." />
+    <meta name="description"
+        content="NeuroGen is a research‑grade AI framework that replaces backpropagation with evolutionary search, genome‑driven construction, and local learning rules." />
 </head>
+
 <body>
     <!-- Header -->
     <header class="site-header">
@@ -29,13 +32,14 @@
     <section class="section" id="what">
         <div class="container">
             <h2>What is NeuroGen?</h2>
-            <p>NeuroGen is an open‑source research framework that replaces traditional gradient‑based learning with a suite of evolutionary and local‑learning mechanisms. It supports:
-                <ul>
-                    <li>Evolutionary search over neural architectures</li>
-                    <li>Genome‑driven network construction</li>
-                    <li>Hebbian, Oja, BCM, STDP learning rules</li>
-                    <li>Dynamic topology mutations (add/remove nodes & edges)</li>
-                </ul>
+            <p>NeuroGen is an open‑source research framework that replaces traditional gradient‑based learning with a
+                suite of evolutionary and local‑learning mechanisms. It supports:
+            <ul>
+                <li>Evolutionary search over neural architectures</li>
+                <li>Genome‑driven network construction</li>
+                <li>Hebbian, Oja, BCM, STDP learning rules</li>
+                <li>Dynamic topology mutations (add/remove nodes & edges)</li>
+            </ul>
             </p>
         </div>
     </section>
@@ -46,17 +50,19 @@
             <h2>How It Works</h2>
             <div class="grid three-columns">
                 <div class="card">
-                    <img src="assets/evolution.svg" alt="Evolution" class="icon" />
+                    <img src="assets/evolution.png" alt="Evolution" class="icon" />
                     <h3>Evolutionary Search</h3>
-                    <p>Populations of genomes are evaluated on a fitness function and evolve via selection, crossover, and mutation.</p>
+                    <p>Populations of genomes are evaluated on a fitness function and evolve via selection, crossover,
+                        and mutation.</p>
                 </div>
                 <div class="card">
-                    <img src="assets/genome.svg" alt="Genome" class="icon" />
+                    <img src="assets/genome.png" alt="Genome" class="icon" />
                     <h3>Genome‑Driven Construction</h3>
-                    <p>Each genome encodes a neural topology; decoding produces a functional network ready for learning.</p>
+                    <p>Each genome encodes a neural topology; decoding produces a functional network ready for learning.
+                    </p>
                 </div>
                 <div class="card">
-                    <img src="assets/local_rules.svg" alt="Local Rules" class="icon" />
+                    <img src="assets/local_rules.png" alt="Local Rules" class="icon" />
                     <h3>Local Learning Rules</h3>
                     <p>Synapses adapt with biologically‑inspired rules (Hebbian, Oja, BCM, STDP) without gradients.</p>
                 </div>
@@ -69,10 +75,9 @@
         <div class="container">
             <h2>Screenshots</h2>
             <div class="grid two-columns">
-                <img src="assets/fitness_curve_placeholder.png" alt="Fitness Curve" class="screenshot" />
-                <img src="assets/network_graph_placeholder.png" alt="Network Graph" class="screenshot" />
+                <img src="assets/fitness_curve_1765298845384.png" alt="Fitness Curve" class="screenshot" />
+                <img src="assets/network_graph_1765298988104.png" alt="Network Graph" class="screenshot" />
             </div>
-            <p class="placeholder-note">(Placeholders – replace with actual images in <code>/assets/</code>)</p>
         </div>
     </section>
 
@@ -107,4 +112,5 @@ python -m neurogen.tasks.xor   # runs the XOR demo</code></pre>
         </div>
     </footer>
 </body>
+
 </html>
