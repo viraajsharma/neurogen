@@ -39,7 +39,6 @@
   <img src="assets/network_graph_1765298988104.png" alt="Network Graph" width="45%" />
 </div>
 
-*Replace the placeholder images in `assets/` with your own visualisations.*
 
 ---
 
