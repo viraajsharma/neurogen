@@ -1,81 +1,30 @@
-"""
-Neuron Module for Neurogen v1.1
-
-This module defines the core Neuron class that represents individual computational units
-in the neural network. Each neuron maintains its own state, activation, and local learning rules.
-"""
-
 import numpy as np
-from typing import Optional, Dict, Any
-
 
 class Neuron:
     """
-    Individual neuron unit with local state and activation.
-    
-    Attributes:
-        neuron_id (int): Unique identifier for the neuron
-        activation (float): Current activation value
-        potential (float): Membrane potential before activation function
-        bias (float): Neuron bias term
-        state (Dict[str, Any]): Additional state information for local learning
+    Represents a single neuron in the graph.
     """
-    
-    def __init__(self, neuron_id: int, bias: float = 0.0):
-        """
-        Initialize a neuron with default parameters.
-        
-        Args:
-            neuron_id: Unique identifier for this neuron
-            bias: Initial bias value (default: 0.0)
-        """
-        self.neuron_id = neuron_id
+    def __init__(self, neuron_id, activation_function='tanh'):
+        self.id = neuron_id
         self.activation = 0.0
-        self.potential = 0.0
-        self.bias = bias
-        self.state = {}
-    
-    def compute_activation(self, inputs: np.ndarray, weights: np.ndarray) -> float:
+        self.state = 0.0  # Internal state (potential)
+        self.connections = []  # List of (target_neuron_id, weight) tuples
+        self.activation_function = activation_function
+
+    def update(self, input_sum):
         """
-        Compute neuron activation given inputs and weights.
-        
-        Args:
-            inputs: Input vector from connected neurons (shape: [n_inputs])
-            weights: Weight vector for connections (shape: [n_inputs])
-        
-        Returns:
-            Computed activation value
+        Updates the neuron's state and activation based on input.
         """
-        # TODO: Implement activation computation
-        # self.potential = np.dot(inputs, weights) + self.bias
-        # self.activation = self._activation_function(self.potential)
-        pass
-    
-    def _activation_function(self, x: float) -> float:
+        self.state = input_sum
+        if self.activation_function == 'tanh':
+            self.activation = np.tanh(self.state)
+        elif self.activation_function == 'sigmoid':
+             self.activation = 1 / (1 + np.exp(-self.state))
+        else:
+            self.activation = self.state # Linear default
+
+    def add_connection(self, target_id, weight):
         """
-        Apply activation function to potential.
-        
-        Args:
-            x: Input value (membrane potential)
-        
-        Returns:
-            Activated value
+        Adds a directed connection to another neuron.
         """
-        # TODO: Implement activation function (e.g., sigmoid, tanh, ReLU)
-        pass
-    
-    def update_state(self, **kwargs):
-        """
-        Update internal neuron state for local learning.
-        
-        Args:
-            **kwargs: Arbitrary state updates (e.g., trace, eligibility)
-        """
-        # TODO: Implement state update logic
-        self.state.update(kwargs)
-    
-    def reset(self):
-        """Reset neuron to initial state."""
-        self.activation = 0.0
-        self.potential = 0.0
-        self.state.clear()
+        self.connections.append([target_id, weight])
