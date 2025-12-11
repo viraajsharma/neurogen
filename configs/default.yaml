@@ -1,0 +1,54 @@
+# Neurogen v1.1 Default Configuration
+
+# Network Architecture
+network:
+  layer_sizes: [10, 20, 20, 2]  # Input, hidden layers, output
+  activation_function: "tanh"    # Options: sigmoid, tanh, relu, linear
+  weight_init_method: "xavier"   # Options: xavier, he, uniform, normal
+  weight_init_scale: 0.1
+
+# Training Parameters
+training:
+  iterations: 1000               # Number of update iterations
+  batch_size: 32                 # Samples per batch
+  learning_rate: 0.01            # Learning rate for updates
+  update_rule: "hebbian"         # Options: hebbian, anti_hebbian, oja, energy_based
+  
+# Energy Function
+energy:
+  regularization: 0.01           # L2 regularization coefficient
+  energy_type: "mse"             # Options: mse, cross_entropy, custom
+
+# Dataset
+dataset:
+  type: "synthetic"              # Options: synthetic, mnist, custom
+  size: 100                      # Number of samples
+  input_dim: 10                  # Input dimensionality
+  output_dim: 2                  # Output dimensionality
+  noise_level: 0.1               # Noise to add to data
+  pattern_type: "binary"         # Options: binary, continuous, mixed
+
+# Reproducibility
+seed:
+  random_seed: 42                # Master seed for reproducibility
+  use_deterministic: true        # Enable deterministic operations
+
+# Logging
+logging:
+  log_frequency: 10              # Log every N iterations
+  log_dir: "logs"                # Directory for log files
+  log_metrics:
+    - "iteration"
+    - "total_energy"
+    - "prediction_error"
+    - "weight_penalty"
+    - "avg_activation"
+    - "weight_change_norm"
+  save_checkpoints: true         # Save network checkpoints
+  checkpoint_frequency: 100      # Save every N iterations
+
+# Visualization
+visualization:
+  plot_energy: true              # Plot energy over time
+  plot_weights: false            # Plot weight distributions
+  plot_activations: false        # Plot activation patterns

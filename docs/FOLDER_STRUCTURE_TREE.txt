@@ -1,0 +1,25 @@
+neurogen/
+├── configs/                  # Configuration files
+│   └── default.yaml          # Default hyperparameters
+├── core/                     # Core neural logic
+│   ├── __init__.py           # Package marker
+│   ├── energy.py             # Energy functions (prediction error + constraints)
+│   ├── network.py            # Neural network structure
+│   ├── neuron.py             # Individual neuron logic
+│   └── update_rules.py       # Local learning rules (Hebbian, etc.)
+├── data/                     # Data management
+│   ├── __init__.py
+│   └── synthetic_dataset.py  # Synthetic data generator
+├── docs/                     # Documentation
+│   ├── DEV_BRANCH_SETUP.md
+│   └── FOLDER_STRUCTURE_V1.1.md
+├── logs/                     # Training logs and checkpoints
+│   └── .keep
+├── training/                 # Training infrastructure
+│   ├── __init__.py
+│   ├── logger.py             # Metrics logging to CSV
+│   └── trainer.py            # Main training loop
+└── utils/                    # Shared utilities
+    ├── __init__.py
+    ├── config_loader.py      # YAML config loader
+    └── seeds.py              # Deterministic seeding
