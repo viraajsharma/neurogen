@@ -19,7 +19,9 @@
 - Evolutionary search over neural architectures.
 - Genome‑driven network construction.
 - Local learning rules: Hebbian, Oja, BCM, STDP.
-- Dynamic topology mutations (add/remove nodes & edges).
+- **Dynamic Pre-Training (v1.1)**: Self-organized pre-training using Hebbian dynamics before evolution.
+- **Stability Verified (v1.1)**: Energy-based stability checks and bound validation.
+- **Modular pipeline (v1.1)**: Clean separation of core logic, data, and training.
 - XOR demo that evolves a perfect solution without gradients.
 
 ---
