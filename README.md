@@ -73,11 +73,29 @@ from neurogen.tasks import xor
 xor.run_demo()
 ```
 
-Run from the command line:
-
-```bash
 python -m neurogen.tasks.xor
 ```
+
+### Self-Organizing Trainer (v1.1)
+
+Run the self-organizing map stability test:
+
+```bash
+python training/trainer.py
+```
+
+Logs are saved to `logs/run_<timestamp>.csv`.
+Verify system stability:
+
+```bash
+python tests/stability_test.py
+```
+
+### v1.1 Stability Results
+
+<div align="center">
+  <img src="assets/v1.1_energy_graph.png" alt="Energy vs Iteration Graph" width="70%" />
+</div>
 
 ---
 
